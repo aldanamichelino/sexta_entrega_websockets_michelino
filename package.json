@@ -1,0 +1,18 @@
+{
+  "name": "practica_motores_de_plantilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "moment": "^2.29.1",
+    "socket.io": "^4.4.1"
+  }
+}

@@ -1,0 +1,21 @@
+  <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+    <h4>Vista de productos</h4>
+    {{#if list}}
+      <table class="table bg-success text-dark bg-opacity-10">
+        <tr class="text-center">
+          <th class="orange-500">Nombre</th>
+          <th class="orange-500">Precio</th>
+          <th class="orange-500">Foto</th>
+        </tr>
+        {{#each products}}
+            <tr class="text-center">
+              <td class="text-white">{{this.name}}</td>
+              <td class="text-white">$ {{this.price}}</td>
+              <td class="text-white"><img src={{this.imageUrl}} alt={{this.name}} style="max-width: 100px; border-radius: 25px"></td>
+            </tr>
+        {{/each}}
+      </table>
+    {{else}}
+      <h3 class="bg-danger p-2">No hay productos</h3>
+    {{/if}}
+  </div>

@@ -1,0 +1,66 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Carga un producto</title>
+    </head>
+    <body>
+        <div class="d-flex flex-column w-100 justify-content-center align-items-center jumbotron">
+            <h3>Ingrese productos</h3>
+            <br>
+            <form action="/productos" method="post" id="addProductForm" class="w-75"> 
+                <div class="d-flex flex-column">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <br>
+                <div class="d-flex flex-column">
+                    <label for="price">Precio</label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <br>
+                <div class="d-flex flex-column">
+                    <label for="imageUrl">Foto URL</label>
+                    <input type="text" name="imageUrl" id="imageUrl">
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="bg-success">Enviar</button>
+                </div>
+            </form>
+
+            <br>
+
+            <div id="productsInfo" class="w-75"></div>
+        </div>
+
+        <div class="d-flex flex-column w-100 justify-content-center align-items-center jumbotron">
+            <h3>Centro de mensajes</h3>
+
+            <div class="w-75">
+                <input type="text" class="w-100" name="userEmail" id="userEmail" placeholder="Ingresá tu email para enviar un mensaje">
+            </div>
+            
+            <br>
+
+            <div id="chat-list" class="w-75 mb-4"></div>
+
+            <form class="w-75" id="sendMessage">
+                <div>
+                    <input type="text" name="message" id="userMessage" placeholder="Ingresá un mensaje" class="w-100">
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="bg-success" id="send-message-button" disabled>Enviar</button>
+                </div>
+            </form>
+        </div>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
